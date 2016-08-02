@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   
+    
+    <link href="~/Styles.css" type="text/css" runat="server" rel="stylesheet"/>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+            
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+
+
+
+            </asp:ScriptManager>
+        <div id="wrapper"> 
+        <div id="banner">
+                        <a href="http://www.bits-pilani.ac.in/"><img src="~/bitslogo.jpg" runat="server" style="background-color:white;width:200px; float:right;margin:3px;"/></a>
+
+            <a href="http://www.indianredcross.org/"><img src="~/ircslogo.png" runat="server" style="float:left;width:300px; margin:3px"/></a>
+            <div id="heading" style="font-variant: small-caps"><h1 style="font-size:2.5em;color:#f7f7f7" >Online Reporting Portal</h1>A <strong style="color:#21D00E">GREEN</strong> step by <strong>IRCS</strong></div>
+        </div>
+        <div>
+            <ul id="nav">
+                <li><a href="~/Pages/Home.aspx" runat="server">Home</a></li>
+
+                <li><a href="~/Pages/ReportsView1.aspx" runat="server">View Reports</a>
+                    
+                </li>
+                <li><a href="~/Pages/ReportsAdd.aspx" runat="server">Add Report</a></li>
+                <li class="dropdown"><a   runat="server" >Manage</a>
+                <div class="dropdown-content">
+                    <a href="~/Pages/ReportsManage.aspx" runat="server">Reports</a>
+                    <a href="~/Pages/AllUsers.aspx" runat="server">Users</a>
+                    <a href="~/Pages/UserAcount.aspx" runat="server">My Account</a>
+                                        <a href="~/Pages/Register.aspx" runat="server">Register a new user</a>
+
+                    <a href="~/Pages/UserLog.aspx" runat="server">User Activity Log</a>
+                </div>
+                    </li>
+                
+                <li style="float:right"><ul><li><asp:Label ID="lblLogin" runat="server" ForeColor="#9a1c1c" Text=""></asp:Label></li>
+                <li><asp:LinkButton  ForeColor="" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CausesValidation="False">LinkButton</asp:LinkButton></li></ul></li>
+            
+                </ul>
+        </div>
+                
+                
+
+            
+        
+            
+
+
+        
+            
+      
+        
+       <div>
+           <asp:LinkButton ID="notification" runat="server"  OnClick="notification_Click" CausesValidation="False">LinkButton</asp:LinkButton></div>
+           <div><asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClick="LinkButton2_Click">LinkButton</asp:LinkButton></div>
+             <div> <asp:LinkButton ID="yettoverify" runat="server"   CausesValidation="False" OnClick="yettoverify_Click">LinkButton</asp:LinkButton></div>
+            <div class ="content_area" id="main-content">
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+            
+        <div id  ="footer" class="footerp">
+            <hr/>
+            <p class="footerp footerhd" style="color:#9a1c1c;" ><strong><u>Created by(Students of BITS-Hyderabad Campus)</u></strong></p>
+            
+   <p class="footerp footerhd" style="color:#9a1c1c;padding:0px;" ><strong>Naman Goyal<a href="mailto:f2014117@hyderabad.bits-pilani.ac.in?Subject=" style="text-decoration:none;color:#9a1c1c;">(f2014117@hyderabad.bits-pilani.ac.in)</a></strong></p><p  class="footerp footerhd"><strong>Shalvak Mittal(f2014723@hyderabad.bits-pilani.ac.in)</strong></p><br/><hr/>
+   
+
+
+           
+           </div>
+             </div>
+       
+   
+         </form>
+</body>
+</html>
